@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useLocale } from "@/hooks/useLocale";
-import { Card, Pill, Reveal, Section } from "@/components/ui/shared";
+import { Card, Pill, Section } from "@/components/ui/shared";
 import { education } from "@/data/education";
 import { en } from "@/data/i18n/en";
 import { km } from "@/data/i18n/km";

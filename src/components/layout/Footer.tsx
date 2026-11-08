@@ -1,4 +1,3 @@
-import React from "react";
 import { useLocale } from "@/hooks/useLocale";
 import { en } from "@/data/i18n/en";
 import { km } from "@/data/i18n/km";

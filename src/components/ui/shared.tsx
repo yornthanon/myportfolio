@@ -111,7 +111,7 @@ export function SkillIcon({ name, className }: { name: string; className?: strin
       <img
         src={src}
         alt={name}
-        className="w-5 h-5 object-contain"
+        className={cn("w-5 h-5 object-contain", className)}
         onError={(e) => {
           const t = e.target as HTMLImageElement;
           const initials = name

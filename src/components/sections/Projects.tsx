@@ -9,6 +9,7 @@ import { km } from "@/data/i18n/km";
 export function Projects({ embedded = false }: { embedded?: boolean }) {
   const { locale } = useLocale();
   const t = locale === "km" ? km : en;
+  void embedded;
 
   return (
     <section id="work" className="section">
