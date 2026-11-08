@@ -4,7 +4,7 @@ export const profile: Profile = {
   name: "Yorn Thanon",
   role: "Full-Stack developer",
   location: "Phnom Penh, Cambodia",
-  bio: "I’m a full-stack developer who designs and builds fast, accessible web products from interface to database. I pair precise engineering with thoughtful design to ship polished, production-ready experiences.",
+  bio: "I design and build luminous, fluid digital experiences where engineering precision meets editorial craft. My work sits at the intersection of interaction, motion, and accessible, production-grade interfaces.",
   photo: "/profile.jpg",
   openToWork: true,
   stats: [

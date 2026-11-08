@@ -4,7 +4,7 @@ export const en: I18nStrings = {
   nav: { home: "Home", about: "About", education: "Education", skills: "Skills", work: "Work", services: "Services", contact: "Contact", hireMe: "Hire me" },
   hero: { openToWork: "Open to work", location: "Phnom Penh, Cambodia", downloadCv: "Download CV", scroll: "Scroll" },
   sections: {
-    about: { label: "About", title: "Hi, I’m Thanon." },
+    about: { label: "About", title: "Crafting interfaces that feel alive" },
     education: { label: "Education", title: "Education & certifications", stats: { schools: "schools", certifications: "certifications", and: "·" }, levels: { university: "University", high: "High school", lower: "Lower secondary", primary: "Primary school", course: "Courses", certificate: "Certificates", other: "Other" } },
     skills: { label: "Skills", title: "Technologies", levels: { advanced: "Advanced", intermediate: "Intermediate", learning: "Learning" } },
     backend: { label: "Backend", title: "Backend Technologies" },
