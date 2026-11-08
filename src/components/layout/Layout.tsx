@@ -6,7 +6,21 @@ import { profile } from "@/data/profile";
 export function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     document.title = profile.name.trim();
-    window.scrollTo(0, 0);
+
+    const scrollToHash = () => {
+      const hash = window.location.hash.slice(1);
+      const target = hash ? document.getElementById(decodeURIComponent(hash)) : null;
+
+      if (target) {
+        requestAnimationFrame(() => target.scrollIntoView({ block: "start", behavior: "auto" }));
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    scrollToHash();
+    window.addEventListener("hashchange", scrollToHash);
+    return () => window.removeEventListener("hashchange", scrollToHash);
   }, []);
 
   return (
