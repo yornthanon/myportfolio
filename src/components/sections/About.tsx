@@ -52,7 +52,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 80, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="mb-2"
             >
               <h1 className="text-[clamp(44px,5.4vw,76px)] leading-[1.04] tracking-[-0.045em] font-bold text-ink max-w-[10ch]">
@@ -63,7 +63,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 160, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
               className="mb-2"
             >
               <p className="text-ink leading-relaxed max-w-[54ch] text-left text-base">{profile.bio}</p>
@@ -72,7 +72,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 240, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
               className="mb-2"
             >
               <div className="flex flex-wrap items-center gap-4">
@@ -95,7 +95,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 320, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.6, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
               className="relative w-full max-w-[570px] aspect-square overflow-hidden bg-[var(--bg)] shadow-raised"
             >
               <img
@@ -114,7 +114,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 400, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
           className="mt-12"
         >
           <div className="about-facts-shell">
