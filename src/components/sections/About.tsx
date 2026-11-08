@@ -4,7 +4,7 @@ import { Card, Pill, Section } from "@/components/ui/shared";
 import { profile } from "@/data/profile";
 import { en } from "@/data/i18n/en";
 import { km } from "@/data/i18n/km";
-import profileCutout from "@/assets/image copy.png";
+import profileCutout from "@/assets/photo-cutout.png";
 import profilePhoto from "@/assets/photo.jpeg";
 import iconRupp from "@/assets/rupp.png";
 import iconMap from "@/assets/map.png";
@@ -16,9 +16,9 @@ const CHECK_CIRCLE = (
 );
 
 const FACTS = [
-  { value: "Year 3 of Computer Science", label: "Education", icon: <img src={iconRupp} className="w-5 " /> },
-  { value: "Phnom Penh", label: "Cambodia", icon: <img src={iconMap} className="w-10 " /> },
-  { value: "Khmer, English", label: "Languages", icon: <img src={iconKhmer} className="w-5 " /> },
+  { value: "Year 3 of Computer Science", label: "Education", icon: <img src={iconRupp} alt="Royal University of Phnom Penh" className="w-5" /> },
+  { value: "Phnom Penh", label: "Cambodia", icon: <img src={iconMap} alt="Location" className="w-10" /> },
+  { value: "Khmer, English", label: "Languages", icon: <img src={iconKhmer} alt="Languages" className="w-5" /> },
 
   {
     value: (
@@ -40,7 +40,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
   return (
     <Section id="about" className="overflow-x-clip">
       <div className="container mx-auto w-full max-w-[1200px] px-4 sm:px-6">
-          <div className="grid gap-y-14 gap-x-56 items-start md:grid-cols-[6fr_5fr]">
+          <div className="grid items-center gap-x-16 gap-y-12 md:grid-cols-[6fr_5fr]">
           <div className="space-y-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -81,15 +81,14 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             >
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={profile.resume}
-                  download
+                  href="#contact"
                   className="btn btn-primary h-12 items-center justify-center whitespace-nowrap px-7 min-w-fit shrink-0"
                 >
-                  {t.hero.downloadCv}
+                  {t.nav.hireMe}
                 </a>
 
-                <a href="#contact" className="btn btn-secondary h-12 px-7 min-w-fit shrink-0">
-                  Contact me
+                <a href="#education" className="btn btn-secondary h-12 px-7 min-w-fit shrink-0">
+                  {t.nav.education}
                 </a>
               </div>
             </motion.div>
@@ -100,7 +99,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 320, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-[min(34vw,460px)] h-[min(34vw,460px)] rounded-full bg-[var(--bg)] shadow-[inset_5px_5px_10px_rgba(0,0,0,0.18),_inset_-5px_-5px_10px_rgba(255,255,255,0.85)] flex items-center justify-center"
+              className="relative w-[min(78vw,460px)] h-[min(78vw,460px)] md:w-[min(34vw,460px)] md:h-[min(34vw,460px)] rounded-full bg-[var(--bg)] shadow-[inset_5px_5px_10px_rgba(0,0,0,0.18),_inset_-5px_-5px_10px_rgba(255,255,255,0.85)] flex items-center justify-center"
             >
               <img
                 src={profileCutout}
@@ -109,7 +108,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
                 height={800}
                 loading="eager"
                 fetchPriority="high"
-                className="drop-shadow-[8px_8px_14px_rgba(0,0,0,0.18)] self-end w-full h-full object-cover object-top"
+                className="drop-shadow-[8px_8px_14px_rgba(0,0,0,0.18)] self-end w-full h-full object-contain object-bottom"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.src = profilePhoto as string;
@@ -127,7 +126,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
         >
               <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mt-12">
             {FACTS.map((fact, i) => (
-              <Card key={i} className="p-5 flex items-center gap-4 w-full max-w-xs">
+              <Card key={i} className="p-5 flex items-center gap-4 w-full max-w-none">
                 <div className="raised-sm w-11 h-11 rounded-full flex items-center justify-center shrink-0">
                   {fact.icon}
                 </div>
