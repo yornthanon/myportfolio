@@ -13,7 +13,7 @@ const CHECK_CIRCLE = (
 );
 
 const FACTS = [
-  { value: "6+", label: "Years experience", icon: <img src={iconRupp} alt="Experience" className="w-5" /> },
+  { value: "Bachelor of Computer Science", label: "RUPP", icon: <img src={iconRupp} alt="Royal University of Phnom Penh" className="w-5" /> },
   { value: "Phnom Penh, Cambodia", label: "Location", icon: <img src={iconMap} alt="Location" className="w-7" /> },
   {
     value: (
