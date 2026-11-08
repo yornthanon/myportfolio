@@ -8,7 +8,7 @@ export const profile: Profile = {
   photo: "/profile.jpg",
   openToWork: true,
   stats: [
-    { label: "Years of experience", value: 6, suffix: "+" },
+    { label: "Year of study", value: 3, suffix: "rd" },
     { label: "Projects shipped", value: 42, suffix: "" },
     { label: "Happy clients", value: 18, suffix: "" },
   ],

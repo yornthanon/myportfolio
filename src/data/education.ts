@@ -6,7 +6,7 @@ export const education: EducationItem[] = [
     title: "Bachelor of Computer Science",
     org: "Royal University of Phnom Penh (RUPP)",
     years: "2024 – 2028",
-    desc: "Pursuing a bachelor's degree in Computer Science at RUPP.",
+    desc: "Currently in Year 3 of a bachelor's degree in Computer Science at RUPP.",
     tags: [],
     current: true,
   },
