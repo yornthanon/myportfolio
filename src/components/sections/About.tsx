@@ -14,7 +14,7 @@ const CHECK_CIRCLE = (
 
 const FACTS = [
   { value: "6+", label: "Years experience", icon: <img src={iconRupp} alt="Experience" className="w-5" /> },
-  { value: "Phnom Penh, Cambodia", label: "Phnom Penh, Cambodia", icon: <img src={iconMap} alt="Location" className="w-8" /> },
+  { value: "Phnom Penh, Cambodia", label: "Location", icon: <img src={iconMap} alt="Location" className="w-7" /> },
   {
     value: (
       <span className="flex items-center gap-1">
@@ -89,8 +89,8 @@ export function About({ embedded = false }: { embedded?: boolean }) {
           <div className="about-facts-shell">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {FACTS.map((fact, i) => (
-              <Card key={i} className="about-fact-card">
-                <div className="raised-sm w-11 h-11 rounded-full flex items-center justify-center shrink-0">
+              <Card key={i} className="about-fact-card shadow-none">
+                <div className="about-fact-icon w-9 h-9 rounded-full flex items-center justify-center shrink-0">
                   {fact.icon}
                 </div>
                 <div className="text-center">
