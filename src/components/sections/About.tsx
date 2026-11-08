@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useLocale } from "@/hooks/useLocale";
 import { Card, Pill, Section } from "@/components/ui/shared";
 import { profile } from "@/data/profile";
@@ -38,43 +37,23 @@ export function About({ embedded = false }: { embedded?: boolean }) {
       <div className="container mx-auto w-full max-w-[1200px] px-4 sm:px-6">
         <div className="grid items-center gap-x-16 gap-y-12 md:grid-cols-[1fr_1fr]">
           <div className="space-y-7">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-2"
-            >
+            <div className="mb-2">
               <Pill active className="text-xs font-semibold tracking-wider uppercase inline-block">
                 {t.sections.about.label}
               </Pill>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-2"
-            >
+            <div className="mb-2">
               <h1 className="text-[clamp(44px,5.4vw,76px)] leading-[1.04] tracking-[-0.045em] font-bold text-ink max-w-[10ch]">
                 {t.sections.about.title}
               </h1>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-2"
-            >
+            <div className="mb-2">
               <p className="text-ink leading-relaxed max-w-[54ch] text-left text-base">{profile.bio}</p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.24, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-2"
-            >
+            <div className="mb-2">
               <div className="flex flex-wrap items-center gap-4">
                 <a
                   href={profile.resume}
@@ -88,16 +67,11 @@ export function About({ embedded = false }: { embedded?: boolean }) {
                   {t.nav.contact}
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           <div className="flex justify-end items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
-              className="relative w-full max-w-[570px] aspect-square overflow-hidden bg-[var(--bg)] shadow-raised"
-            >
+            <div className="relative w-full max-w-[570px] aspect-square overflow-hidden bg-[var(--bg)] shadow-raised">
               <img
                 src={profileCutout}
                 alt="Creative professional wearing headphones with a cat"
@@ -107,16 +81,11 @@ export function About({ embedded = false }: { embedded?: boolean }) {
                 fetchPriority="high"
                 className="w-full h-full object-cover"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-12"
-        >
+        <div className="mt-12">
           <div className="about-facts-shell">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
             {FACTS.map((fact, i) => (
@@ -132,7 +101,7 @@ export function About({ embedded = false }: { embedded?: boolean }) {
             ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
 
       </div>
