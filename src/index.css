@@ -524,7 +524,7 @@ textarea.input-field {
 
 .navbar a,
 .navbar button {
-  transition: none !important;
+  transition: box-shadow 180ms ease, color 180ms ease, transform 180ms ease, background-color 180ms ease;
 }
 
 /* Brand: profile photo image only, no name text */
@@ -535,8 +535,8 @@ textarea.input-field {
 }
 
 .brand img.brand-logo {
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   object-fit: cover;
   object-position: top;
@@ -612,6 +612,10 @@ textarea.input-field {
   align-items: center;
 }
 
+.nav-link-active:hover {
+  box-shadow: var(--shadow-raised);
+}
+
 /* Right: language switcher + social icon buttons */
 .nav-right {
   display: flex;
@@ -674,6 +678,7 @@ textarea.input-field {
 
 .social-btn:active {
   box-shadow: var(--shadow-inset);
+  transform: translateY(1px);
 }
 
 .social-btn:focus-visible {
@@ -686,13 +691,36 @@ textarea.input-field {
   height: 20px;
 }
 
+.mobile-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: var(--shadow-raised-sm);
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-text);
+  cursor: pointer;
+}
+
+.mobile-toggle:active,
+.mobile-toggle[aria-expanded="true"] {
+  box-shadow: var(--shadow-inset);
+}
+
+.mobile-menu {
+  display: none;
+}
+
 /* Khmer typography */
 .khmer {
   font-family: "Kantumruy Pro", "Noto Sans Khmer", var(--font-sans);
   line-height: 1.8;
 }
 
-/* Responsive navbar: <=1040px hide links/social/language (no hamburger panel) */
+/* Responsive navbar: collapse into a compact neumorphic menu on smaller screens */
 @media (max-width: 1040px) {
   .nav-center {
     display: none !important;
@@ -702,6 +730,37 @@ textarea.input-field {
   }
   .social-btn {
     display: none !important;
+  }
+  .mobile-toggle {
+    display: inline-flex;
+  }
+  .mobile-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    right: 0;
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.65rem;
+    background: var(--bg);
+    border-radius: 24px;
+    box-shadow: var(--shadow-raised);
+  }
+  .mobile-menu-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1rem;
+    border-radius: 16px;
+    color: var(--muted);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .mobile-menu-link:hover,
+  .mobile-menu-link-active {
+    color: var(--accent-text);
+    background: var(--bg);
+    box-shadow: var(--shadow-raised-sm);
   }
 }
 

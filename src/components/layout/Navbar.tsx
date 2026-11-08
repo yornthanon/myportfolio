@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useLocale } from "@/hooks/useLocale";
@@ -10,6 +10,7 @@ import iconTelegram from "@/assets/Telegram_logo_icon.svg";
 import iconGmail from "@/assets/Gmail_icon_(2020).svg";
 import { en } from "@/data/i18n/en";
 import { km } from "@/data/i18n/km";
+import { Menu, X } from "lucide-react";
 
 const SOCIAL = [
   { name: "Facebook", href: "https://web.facebook.com/tha.non.20", external: true },
@@ -28,6 +29,7 @@ const icons: Record<string, React.ReactNode> = {
 export function Navbar() {
   const { locale } = useLocale();
   const t = locale === "km" ? km : en;
+  const [menuOpen, setMenuOpen] = useState(false);
   const activeId = useScrollSpy([
     "home", "about", "education", "skills", "work", "services", "contact",
   ]);
@@ -55,67 +57,71 @@ export function Navbar() {
   const isActive = (id: string): boolean => activeId === id;
 
   return (
-    <>
-      <nav className="navbar fixed top-4 left-1/2 -translate-x-1/2 z-[50] px-3 sm:px-4 py-2.5 sm:py-3" aria-label="Main navigation">
-        <div className="flex flex-col items-center gap-2">
-          <div className="flex items-center gap-6 w-full max-w-[560px]">
-            <div className="shrink-0 rounded-full overflow-hidden border-2 border-gray-400/40">
-              <img src={profilePhoto} alt="Profile" className="w-8 h-8 object-cover" />
-            </div>
-            <div className="hidden sm:flex items-center gap-3">
-              {NAV_LINKS.map((link) => (
-                <a
-                  key={link.id}
-                  href={link.href}
-                  aria-current={isActive(link.id) ? "page" : undefined}
-                  className={cn(
-                    "nav-link px-3 py-2 rounded-xl text-xs sm:text-sm",
-                    locale === "km" && "khmer",
-                    isActive(link.id) ? "bg-accent text-white" : "text-[var(--text)] hover:text-accent",
-                  )}
-                >
-                  {labels[link.id]}
-                </a>
-              ))}
-            </div>
-            <div className="flex items-center gap-2 sm:gap-3 ml-auto">
-              <div className="flex gap-1">
-                <button
-                  type="button"
-                  className={cn(
-                    "px-2.5 py-1.5 rounded-xl font-semibold text-[10px]",
-                    locale === "en" ? "bg-accent text-white" : "bg-[var(--surface)] text-[var(--text)] hover:bg-[var(--surface)] hover:text-accent",
-                  )}
-                  onClick={toggleLocale}
-                >
-                  EN
-                </button>
-                <button
-                  type="button"
-                  className={cn(
-                    "px-2.5 py-1.5 rounded-xl font-semibold text-[10px]",
-                    locale === "km" ? "bg-accent text-white" : "bg-[var(--surface)] text-[var(--text)] hover:bg-[var(--surface)] hover:text-accent",
-                  )}
-                  onClick={toggleLocale}
-                >
-                  ខ្មែរ
-                </button>
-              </div>
-              {SOCIAL.map((s) => (
-                <a
-                  key={s.name}
-                  href={s.href}
-                  {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="w-8 h-8 rounded-full bg-[var(--surface)] shadow-inset flex items-center justify-center shrink-0"
-                  aria-label={s.name}
-                >
-                  {icons[s.name]}
-                </a>
-              ))}
-            </div>
-          </div>
+    <nav className="navbar" aria-label="Main navigation">
+      <a className="brand" href="#home" aria-label="Go to home">
+        <img src={profilePhoto} alt="Profile" className="brand-logo" />
+      </a>
+
+      <div className="nav-center">
+        <div className="nav-pill" role="list">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.id}
+              href={link.href}
+              role="listitem"
+              aria-current={isActive(link.id) ? "page" : undefined}
+              className={cn(
+                isActive(link.id) ? "nav-link-active" : "nav-link",
+                locale === "km" && "khmer",
+              )}
+              onClick={() => setMenuOpen(false)}
+            >
+              {labels[link.id]}
+            </a>
+          ))}
         </div>
-      </nav>
-    </>
+      </div>
+
+      <div className="nav-right">
+        <div className="lang-switcher" aria-label="Language selector">
+          <button type="button" className={cn("lang-option", locale === "en" && "lang-option-active")} onClick={toggleLocale}>
+            EN
+          </button>
+          <button type="button" className={cn("lang-option khmer", locale === "km" && "lang-option-active")} onClick={toggleLocale}>
+            ខ្មែរ
+          </button>
+        </div>
+        {SOCIAL.map((s) => (
+          <a
+            key={s.name}
+            href={s.href}
+            {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+            className="social-btn"
+            aria-label={s.name}
+          >
+            {icons[s.name]}
+          </a>
+        ))}
+        <button
+          type="button"
+          className="mobile-toggle"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </div>
+
+      {menuOpen && (
+        <div className="mobile-menu" role="menu">
+          {NAV_LINKS.map((link) => (
+            <a key={link.id} href={link.href} className={cn("mobile-menu-link", isActive(link.id) && "mobile-menu-link-active", locale === "km" && "khmer")} onClick={() => setMenuOpen(false)}>
+              {labels[link.id]}
+            </a>
+          ))}
+        </div>
+      )}
+    </nav>
   );
 }
