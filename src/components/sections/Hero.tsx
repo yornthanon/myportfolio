@@ -39,7 +39,7 @@ export function Hero() {
             className="hero-photo flex flex-col justify-center items-center py-4 md:py-0"
           >
             <div
-              className="relative w-[320px] h-[320px] md:w-[500px] md:h-[500px] shrink-0 rounded-full bg-[#DCDCDC] flex items-center justify-center p-4 md:p-6 shadow-[8px_8px_16px_rgba(0,0,0,0.18),_-8px_-8px_16px_rgba(255,255,255,0.85)]"
+              className="hero-photo-disc relative w-[320px] h-[320px] md:w-[500px] md:h-[500px] shrink-0 rounded-full bg-[#DCDCDC] flex items-center justify-center p-4 md:p-6 shadow-[8px_8px_16px_rgba(0,0,0,0.18),_-8px_-8px_16px_rgba(255,255,255,0.85)]"
             >
               <div
                 className="relative w-full h-full rounded-full overflow-hidden bg-[#DCDCDC] flex items-center justify-center shadow-[inset_5px_5px_10px_rgba(0,0,0,0.18),_inset_-5px_-5px_10px_rgba(255,255,255,0.85)]"
