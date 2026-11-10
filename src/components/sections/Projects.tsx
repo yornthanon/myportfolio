@@ -27,19 +27,19 @@ export function Projects({ embedded = false }: { embedded?: boolean }) {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div className="grid grid-cols-1 gap-6 mt-8 max-w-4xl mx-auto">
           {projects.map((project) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="rounded-[28px] p-6 bg-[var(--bg)] shadow-[6px_6px_12px_#b9b9b9,_-6px_-6px_12px_#fbfbfb] border-none transition-all duration-200 group-hover:-translate-y-1 group-hover:shadow-[8px_8px_16px_#b9b9b9,_-8px_-8px_16px_#fbfbfb]"
+              className="w-full rounded-[28px] p-4 sm:p-6 bg-[var(--bg)] shadow-[6px_6px_12px_#b9b9b9,_-6px_-6px_12px_#fbfbfb] border-none transition-all duration-200"
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-[200px] object-cover rounded-[20px] mb-4"
+                className="w-full aspect-[16/9] object-cover rounded-[20px] mb-4"
                 loading="lazy"
               />
               <div className="flex items-center gap-1.5 mb-3">
@@ -64,7 +64,7 @@ export function Projects({ embedded = false }: { embedded?: boolean }) {
                   </Pill>
                 ))}
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <Button
                   asChild
                   variant="ghost"
