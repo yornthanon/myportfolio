@@ -335,8 +335,8 @@ body {
 
 @media (max-width: 640px) {
   .hero-grid {
-    grid-template-columns: 88px minmax(0, 1fr);
-    gap: 16px;
+    grid-template-columns: 128px minmax(0, 1fr);
+    gap: 20px;
     align-items: start;
     min-height: auto;
   }
@@ -350,9 +350,9 @@ body {
   }
 
   .hero-photo-disc {
-    width: 80px !important;
-    height: 80px !important;
-    padding: 4px !important;
+    width: 120px !important;
+    height: 120px !important;
+    padding: 6px !important;
     box-shadow: var(--shadow-raised-mobile) !important;
   }
 
