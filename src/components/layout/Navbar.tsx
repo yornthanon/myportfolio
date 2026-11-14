@@ -102,6 +102,24 @@ export function Navbar() {
             {icons[s.name]}
           </a>
         ))}
+        <div className="quick-actions" aria-label="Quick contact actions">
+          <a
+            href="https://t.me/yornthanon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="quick-action"
+            aria-label="Message on Telegram"
+          >
+            {icons.Telegram}
+          </a>
+          <a
+            href="mailto:yornthanon.dev@gmail.com"
+            className="quick-action"
+            aria-label="Send email"
+          >
+            {icons.Email}
+          </a>
+        </div>
         <button
           type="button"
           className="mobile-toggle"

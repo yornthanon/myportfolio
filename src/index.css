@@ -808,6 +808,41 @@ textarea.input-field {
   height: 20px;
 }
 
+.quick-actions {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quick-action {
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: var(--shadow-raised-sm);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.quick-action:active {
+  box-shadow: var(--shadow-inset);
+  transform: translateY(1px);
+}
+
+.quick-action:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 2px;
+}
+
+.quick-action img {
+  width: 20px;
+  height: 20px;
+}
+
 .mobile-toggle {
   display: none;
   width: 44px;
@@ -847,6 +882,9 @@ textarea.input-field {
   }
   .social-btn {
     display: none !important;
+  }
+  .quick-actions {
+    display: flex;
   }
   .mobile-toggle {
     display: inline-flex;
