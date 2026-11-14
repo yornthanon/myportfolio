@@ -4,7 +4,7 @@ import { GlassCard } from "@/components/ui/GlassCard";
 import { Pill } from "@/components/ui/Pill";
 import { Button } from "@/components/ui/Button";
 import { Input, Textarea } from "@/components/ui/Input";
-import { contactInfo } from "@/data/contact";
+import { contactInfo, telegramHref } from "@/data/contact";
 import { en } from "@/data/i18n/en";
 import { km } from "@/data/i18n/km";
 import { Send } from "lucide-react";
@@ -71,7 +71,7 @@ export function Contact({ embedded = false }: { embedded?: boolean }) {
     {
       label: "Telegram",
       value: contactInfo.telegram,
-      href: `https://t.me/${contactInfo.telegram.replace(/^@/, "")}`,
+      href: telegramHref(contactInfo.telegram),
       icon: <img src={iconTelegram} alt="Telegram" className="w-5 h-5" />,
     },
     {

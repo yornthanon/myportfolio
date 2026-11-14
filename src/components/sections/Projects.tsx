@@ -27,7 +27,7 @@ export function Projects({ embedded = false }: { embedded?: boolean }) {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 mt-8 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 gap-6 mt-8 max-w-xl mx-auto">
           {projects.map((project) => (
             <motion.div
               key={project.title}
@@ -64,13 +64,14 @@ export function Projects({ embedded = false }: { embedded?: boolean }) {
                   </Pill>
                 ))}
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-3">
                 <Button
                   asChild
                   variant="ghost"
                   href={project.live}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center px-2 text-xs sm:text-sm"
                 >
                   Live demo
                 </Button>
@@ -79,7 +80,8 @@ export function Projects({ embedded = false }: { embedded?: boolean }) {
                   variant="ghost"
                   href={project.github}
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-full items-center justify-center px-2 text-xs sm:text-sm"
                 >
                   Source
                 </Button>

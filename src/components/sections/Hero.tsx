@@ -13,8 +13,8 @@ const [firstName, lastName] = profile.name.split(" ");
 
 const SOCIAL = [
   { name: "Facebook", href: "https://web.facebook.com/tha.non.20", external: true },
-  { name: "GitHub", href: "https://github.com/sovannak", external: true },
-  { name: "Telegram", href: "https://t.me/sovannak", external: true },
+  { name: "GitHub", href: "https://github.com/yornthanon", external: true },
+  { name: "Telegram", href: "https://t.me/yornthanon", external: true },
   { name: "Email", href: "mailto:yornthanon.dev@gmail.com", external: false },
 ] as const;
 const icons: Record<string, React.ReactNode> = {

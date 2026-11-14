@@ -1,13 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">TSM Ticket Management System dashboard</title>
+  <desc id="desc">A ticket management dashboard with ticket status cards, a queue and notification activity.</desc>
   <defs>
-    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0ea5e9"/>
-      <stop offset="100%" stop-color="#7c3aed"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1730"/>
+      <stop offset="1" stop-color="#152b4a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19b5fe"/>
+      <stop offset="1" stop-color="#1475e8"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="450" fill="#0f172a"/>
-  <rect x="60" y="60" width="300" height="330" rx="24" fill="url(#g1)" opacity="0.9"/>
-  <rect x="420" y="60" width="320" height="330" rx="24" fill="#1e293b"/>
-  <text x="400" y="210" font-family="system-ui,sans-serif" font-size="40" font-weight="700" fill="#94a3b8" text-anchor="middle">AQUA</text>
-  <text x="400" y="255" font-family="system-ui,sans-serif" font-size="24" fill="#64748b" text-anchor="middle">COMMERCE</text>
+  <rect width="800" height="450" rx="28" fill="url(#bg)"/>
+  <rect x="28" y="28" width="150" height="394" rx="18" fill="#101f39" stroke="#294260"/>
+  <circle cx="62" cy="66" r="18" fill="url(#accent)"/>
+  <text x="91" y="71" font-family="system-ui,sans-serif" font-size="16" font-weight="700" fill="#e8f2ff">TSM</text>
+  <rect x="48" y="116" width="110" height="34" rx="10" fill="#1d78e8"/>
+  <text x="67" y="138" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#fff">Dashboard</text>
+  <text x="67" y="184" font-family="system-ui,sans-serif" font-size="12" fill="#8da4c2">Tickets</text>
+  <text x="67" y="220" font-family="system-ui,sans-serif" font-size="12" fill="#8da4c2">Orders</text>
+  <text x="67" y="256" font-family="system-ui,sans-serif" font-size="12" fill="#8da4c2">Users &amp; Roles</text>
+  <text x="67" y="292" font-family="system-ui,sans-serif" font-size="12" fill="#8da4c2">Notifications</text>
+  <rect x="202" y="28" width="570" height="394" rx="18" fill="#f5f8fc"/>
+  <text x="230" y="67" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#12233d">Ticket overview</text>
+  <text x="230" y="91" font-family="system-ui,sans-serif" font-size="11" fill="#68809e">Live operations dashboard</text>
+  <circle cx="726" cy="62" r="16" fill="#e8f2ff"/>
+  <path d="M719 63h14M722 58h8M722 68h8" stroke="#1475e8" stroke-width="2" stroke-linecap="round"/>
+  <g>
+    <rect x="230" y="116" width="158" height="76" rx="14" fill="#eaf4ff"/>
+    <text x="248" y="141" font-family="system-ui,sans-serif" font-size="11" fill="#55708e">OPEN TICKETS</text>
+    <text x="248" y="174" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#1475e8">128</text>
+    <rect x="404" y="116" width="158" height="76" rx="14" fill="#eafaf3"/>
+    <text x="422" y="141" font-family="system-ui,sans-serif" font-size="11" fill="#55708e">RESOLVED</text>
+    <text x="422" y="174" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#16a36b">86</text>
+    <rect x="578" y="116" width="158" height="76" rx="14" fill="#fff5e8"/>
+    <text x="596" y="141" font-family="system-ui,sans-serif" font-size="11" fill="#55708e">PENDING</text>
+    <text x="596" y="174" font-family="system-ui,sans-serif" font-size="26" font-weight="700" fill="#e58a1f">24</text>
+  </g>
+  <rect x="230" y="214" width="322" height="176" rx="14" fill="#fff" stroke="#e2eaf3"/>
+  <text x="248" y="244" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#12233d">Recent tickets</text>
+  <g font-family="system-ui,sans-serif" font-size="11">
+    <text x="248" y="276" fill="#3c5876">#TK-1042  Payment issue</text><rect x="466" y="263" width="62" height="20" rx="10" fill="#eafaf3"/><text x="478" y="277" fill="#159467">Open</text>
+    <text x="248" y="314" fill="#3c5876">#TK-1041  Event details</text><rect x="466" y="301" width="62" height="20" rx="10" fill="#eaf4ff"/><text x="474" y="315" fill="#1475e8">Solved</text>
+    <text x="248" y="352" fill="#3c5876">#TK-1040  Refund request</text><rect x="466" y="339" width="62" height="20" rx="10" fill="#fff5e8"/><text x="474" y="353" fill="#d67c12">Pending</text>
+  </g>
+  <rect x="570" y="214" width="166" height="176" rx="14" fill="#fff" stroke="#e2eaf3"/>
+  <text x="588" y="244" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#12233d">Activity</text>
+  <circle cx="594" cy="274" r="5" fill="#19b5fe"/><text x="608" y="278" font-family="system-ui,sans-serif" font-size="10" fill="#55708e">Notification sent</text>
+  <circle cx="594" cy="308" r="5" fill="#16a36b"/><text x="608" y="312" font-family="system-ui,sans-serif" font-size="10" fill="#55708e">Order confirmed</text>
+  <circle cx="594" cy="342" r="5" fill="#e58a1f"/><text x="608" y="346" font-family="system-ui,sans-serif" font-size="10" fill="#55708e">Ticket updated</text>
 </svg>

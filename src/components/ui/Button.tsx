@@ -25,7 +25,7 @@ export function Button({
         ? "text-accent hover:text-accent hover:shadow-raised-sm border-none"
         : "bg-surface text-ink shadow-raised-sm border-none";
 
-  const Comp = asChild ? "span" : "button";
+  const Comp = asChild ? "a" : "button";
   return (
     <Comp
       {...(rest as Record<string, unknown>)}
