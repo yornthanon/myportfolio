@@ -356,32 +356,33 @@ body {
 
 @media (max-width: 640px) {
   .hero-grid {
-    grid-template-columns: 128px minmax(0, 1fr);
-    gap: 20px;
-    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: center;
     min-height: auto;
   }
 
   .hero-photo {
-    order: 0;
+    order: -1;
     height: auto;
     margin: 0;
     padding: 0;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .hero-photo-disc {
-    width: 120px !important;
-    height: 120px !important;
-    padding: 6px !important;
+    width: 168px !important;
+    height: 168px !important;
+    padding: 7px !important;
     box-shadow: var(--shadow-raised-mobile) !important;
   }
 
   .hero-text {
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     gap: 0.75rem;
     min-width: 0;
+    width: 100%;
   }
 
   .hero-name {
@@ -398,8 +399,9 @@ body {
   }
 
   .hero-buttons {
-    justify-content: flex-start;
+    justify-content: center;
     gap: 0.625rem;
+    width: 100%;
   }
 
   .hero-buttons .btn {
