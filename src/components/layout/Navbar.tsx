@@ -15,7 +15,7 @@ import { Menu, X } from "lucide-react";
 const SOCIAL = [
   { name: "Facebook", href: "https://web.facebook.com/tha.non.20", external: true },
   { name: "GitHub", href: "https://github.com/yornthanon", external: true },
-  { name: "Telegram", href: "https://t.me/yornthanon", external: true },
+  { name: "Telegram", href: "https://t.me/yornthanon_bot", external: true },
   { name: "Email", href: "mailto:yornthanon.dev@gmail.com", external: true },
 ] as const;
 
@@ -104,7 +104,7 @@ export function Navbar() {
         ))}
         <div className="quick-actions" aria-label="Quick contact actions">
           <a
-            href="https://t.me/yornthanon"
+            href="https://t.me/yornthanon_bot"
             target="_blank"
             rel="noopener noreferrer"
             className="quick-action"

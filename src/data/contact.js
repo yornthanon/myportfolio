@@ -1,7 +1,7 @@
 // Real contact details from navbar / profile
 export const contactInfo = {
   email: "yornthanon.dev@gmail.com",
-  telegram: "@yornthanon",
+  telegram: "@yornthanon_bot",
   facebook: "https://web.facebook.com/tha.non.20",
   github: "https://github.com/yornthanon",
 };
