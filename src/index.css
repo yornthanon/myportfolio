@@ -84,6 +84,27 @@ body {
   padding: 96px 0;
 }
 
+.project-card-actions a {
+  min-height: 44px;
+}
+
+@media (max-width: 640px) {
+  .project-card {
+    padding: 0.75rem;
+  }
+
+  .project-card-image {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card-actions {
+    position: static;
+    margin-top: 0.25rem;
+  }
+}
+
 /* ---------- Hero ---------- */
 .hero-section {
   min-height: calc(100vh - var(--nav-h));
